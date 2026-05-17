@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Santé Cameroun - Informations et conseils de santé pour les Camerounais">
-  <title>Santé Cameroun</title>
+  <meta name="keywords" content="sante, cameroun, medecine, conseils, paludisme, nutrition">
+  <title>Sante Cameroun</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -19,73 +19,37 @@
     header {
       background: #006633;
       color: #fff;
-      padding: 16px 20px;
+      padding: 18px 20px;
       text-align: center;
       border-bottom: 4px solid #ce1126;
     }
 
-    header h1 {
-      font-size: 1.6em;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 0.85em;
-      opacity: 0.85;
-      margin-top: 4px;
-    }
-
-    nav {
-      background: #004d26;
-      padding: 0;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    nav a {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 16px;
-      font-size: 0.85em;
-      border-right: 1px solid #006633;
-    }
-
-    nav a:hover { background: #ce1126; }
-
-    .hero {
-      background: #006633;
-      color: #fff;
-      padding: 24px 20px;
-      text-align: center;
-    }
-
-    .hero h2 { font-size: 1.3em; margin-bottom: 8px; }
-    .hero p { font-size: 0.9em; opacity: 0.9; }
+    header h1 { font-size: 1.6em; letter-spacing: 1px; }
+    header p { font-size: 0.88em; margin-top: 5px; opacity: 0.9; }
 
     .container { max-width: 700px; margin: 0 auto; padding: 16px; }
 
-    .alert {
+    .alerte {
       background: #fff3cd;
       border-left: 4px solid #ffa500;
       padding: 12px 16px;
-      margin: 16px 0;
+      margin: 18px 0;
       border-radius: 4px;
       font-size: 0.9em;
     }
 
-    .alert strong { color: #ce1126; }
+    .alerte strong { color: #ce1126; }
 
-    .section-title {
+    h2 {
       background: #006633;
       color: #fff;
-      padding: 8px 14px;
+      padding: 9px 14px;
       font-size: 1em;
-      margin: 24px 0 12px;
+      margin: 26px 0 13px;
       border-left: 5px solid #ce1126;
     }
 
-    .card {
+    .bloc {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 6px;
@@ -93,7 +57,7 @@
       margin-bottom: 14px;
     }
 
-    .card h3 {
+    .bloc h3 {
       color: #006633;
       font-size: 1em;
       margin-bottom: 8px;
@@ -101,33 +65,33 @@
       padding-bottom: 6px;
     }
 
-    .card p { font-size: 0.88em; color: #333; }
-    .card ul { padding-left: 18px; margin-top: 6px; }
-    .card ul li { font-size: 0.88em; margin-bottom: 4px; }
+    .bloc p { font-size: 0.88em; color: #333; }
+    .bloc ul { padding-left: 18px; margin-top: 6px; }
+    .bloc ul li { font-size: 0.88em; margin-bottom: 4px; }
 
-    .symptom-table {
+    table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.85em;
       margin-top: 8px;
     }
 
-    .symptom-table th {
+    table th {
       background: #006633;
       color: #fff;
       padding: 8px;
       text-align: left;
     }
 
-    .symptom-table td {
+    table td {
       padding: 8px;
       border-bottom: 1px solid #eee;
       vertical-align: top;
     }
 
-    .symptom-table tr:nth-child(even) td { background: #f9f9f9; }
+    table tr:nth-child(even) td { background: #f9f9f9; }
 
-    .tip-box {
+    .conseil {
       background: #e8f5e9;
       border: 1px solid #006633;
       border-radius: 6px;
@@ -135,11 +99,11 @@
       margin-bottom: 14px;
     }
 
-    .tip-box h3 { color: #004d26; font-size: 0.95em; margin-bottom: 6px; }
-    .tip-box p, .tip-box li { font-size: 0.87em; }
-    .tip-box ul { padding-left: 16px; }
+    .conseil h3 { color: #004d26; font-size: 0.95em; margin-bottom: 6px; }
+    .conseil p, .conseil li { font-size: 0.87em; }
+    .conseil ul { padding-left: 16px; }
 
-    .urgence {
+    .danger {
       background: #ffe5e5;
       border: 2px solid #ce1126;
       border-radius: 6px;
@@ -147,39 +111,19 @@
       margin: 16px 0;
     }
 
-    .urgence h3 { color: #ce1126; margin-bottom: 8px; font-size: 1em; }
-    .urgence p, .urgence li { font-size: 0.87em; }
-    .urgence ul { padding-left: 16px; }
+    .danger h3 { color: #ce1126; margin-bottom: 8px; font-size: 1em; }
+    .danger p, .danger li { font-size: 0.87em; }
+    .danger ul { padding-left: 16px; }
 
     .numero {
       display: inline-block;
       background: #ce1126;
       color: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 1.1em;
+      padding: 5px 13px;
+      border-radius: 18px;
+      font-size: 1.05em;
       font-weight: bold;
       margin: 4px 4px 4px 0;
-      text-decoration: none;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media (max-width: 480px) { .grid-2 { grid-template-columns: 1fr; } }
-
-    .badge {
-      display: inline-block;
-      background: #006633;
-      color: #fff;
-      font-size: 0.72em;
-      padding: 2px 8px;
-      border-radius: 10px;
-      margin-left: 6px;
-      vertical-align: middle;
     }
 
     footer {
@@ -192,328 +136,301 @@
     }
 
     footer p { margin-bottom: 4px; }
-    footer a { color: #aaa; }
-
     hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🌿 Santé Cameroun</h1>
-  <p>Informations médicales fiables pour tous les Camerounais</p>
+  <h1>Sante Cameroun</h1>
+  <p>Informations medicales fiables pour tous les Camerounais</p>
 </header>
-
-<nav>
-  <a href="#paludisme">Paludisme</a>
-  <a href="#nutrition">Nutrition</a>
-  <a href="#maman">Maternité</a>
-  <a href="#enfant">Enfant</a>
-  <a href="#prevention">Prévention</a>
-  <a href="#urgences">Urgences</a>
-  <a href="#contacts">Contacts</a>
-</nav>
-
-<div class="hero">
-  <h2>Votre santé, notre priorité</h2>
-  <p>Des conseils simples, gratuits et adaptés à notre contexte camerounais</p>
-</div>
 
 <div class="container">
 
-  <div class="alert">
-    <strong>⚠️ Important :</strong> Ce site fournit des informations générales. En cas d'urgence médicale, consultez immédiatement un professionnel de santé ou appelez le <strong>119</strong> (SAMU Cameroun).
+  <div class="alerte">
+    <strong>Important :</strong> Ce site fournit des informations generales. En cas d'urgence medicale, consultez immediatement un professionnel de sante ou appelez le <strong>119</strong> (SAMU Cameroun).
   </div>
 
-  <!-- PALUDISME -->
-  <h2 class="section-title" id="paludisme">🦟 Paludisme</h2>
+  <h2 id="paludisme">Paludisme</h2>
 
-  <div class="card">
+  <div class="bloc">
     <h3>Qu'est-ce que le paludisme ?</h3>
-    <p>Le paludisme (malaria) est la maladie la plus meurtrière au Cameroun. Il est causé par un parasite transmis par la piqûre du moustique anophèle femelle, principalement la nuit. Il est traitable et évitable.</p>
+    <p>Le paludisme est la maladie la plus meurtriere au Cameroun. Il est cause par un parasite transmis par la piqure du moustique anophele femelle, principalement la nuit. Il est traitable et evitable.</p>
   </div>
 
-  <div class="card">
-    <h3>Symptômes à reconnaître</h3>
-    <table class="symptom-table">
-      <tr><th>Symptôme</th><th>Description</th></tr>
-      <tr><td>Fièvre</td><td>Température élevée, souvent en accès (frissons puis chaleur)</td></tr>
-      <tr><td>Maux de tête</td><td>Douleurs intenses, souvent frontales</td></tr>
-      <tr><td>Nausées / vomissements</td><td>Difficultés à manger ou boire</td></tr>
-      <tr><td>Douleurs musculaires</td><td>Corps cassé, fatigue intense</td></tr>
-      <tr><td>Sueurs froides</td><td>Après les accès de fièvre</td></tr>
+  <div class="bloc">
+    <h3>Symptomes a reconnaitre</h3>
+    <table>
+      <tr><th>Symptome</th><th>Details</th></tr>
+      <tr><td>Fievre</td><td>Temperature elevee, souvent en acces avec frissons puis chaleur</td></tr>
+      <tr><td>Maux de tete</td><td>Douleurs intenses, souvent frontales</td></tr>
+      <tr><td>Nausees et vomissements</td><td>Difficultes a manger ou a boire</td></tr>
+      <tr><td>Douleurs musculaires</td><td>Corps casse, fatigue intense</td></tr>
+      <tr><td>Sueurs froides</td><td>Apres les acces de fievre</td></tr>
     </table>
   </div>
 
-  <div class="urgence">
-    <h3>⛔ Signes de danger — Aller immédiatement à l'hôpital</h3>
+  <div class="danger">
+    <h3>Signes de danger : aller immediatement a l'hopital</h3>
     <ul>
       <li>Convulsions ou perte de connaissance</li>
-      <li>Fièvre très élevée chez un enfant de moins de 5 ans</li>
-      <li>Urine de couleur noire (fièvre bilieuse hémoglobinurique)</li>
-      <li>Difficultés à respirer</li>
-      <li>Femme enceinte avec fièvre</li>
+      <li>Fievre tres elevee chez un enfant de moins de 5 ans</li>
+      <li>Urine de couleur noire</li>
+      <li>Difficultes a respirer</li>
+      <li>Femme enceinte avec fievre</li>
     </ul>
   </div>
 
-  <div class="tip-box">
-    <h3>✅ Comment se protéger</h3>
+  <div class="conseil">
+    <h3>Comment se proteger du paludisme</h3>
     <ul>
-      <li>Dormir sous une moustiquaire imprégnée d'insecticide (MILDA)</li>
-      <li>Utiliser des répulsifs sur la peau le soir</li>
-      <li>Éliminer les eaux stagnantes autour de la maison</li>
-      <li>Porter des vêtements longs après 18h</li>
-      <li>Fermer les fenêtres et portes au coucher du soleil</li>
+      <li>Dormir sous une moustiquaire impregnee d'insecticide (MILDA)</li>
+      <li>Utiliser des repulsifs sur la peau le soir</li>
+      <li>Eliminer les eaux stagnantes autour de la maison</li>
+      <li>Porter des vetements longs apres 18h</li>
+      <li>Fermer les fenetres et portes au coucher du soleil</li>
     </ul>
   </div>
 
-  <!-- NUTRITION -->
-  <h2 class="section-title" id="nutrition">🥗 Nutrition et Alimentation</h2>
+  <h2 id="nutrition">Nutrition et Alimentation</h2>
 
-  <div class="card">
+  <div class="bloc">
     <h3>Bien manger avec les aliments locaux</h3>
-    <p>Une bonne alimentation n'exige pas d'acheter des produits importés. Les aliments camerounais sont riches en nutriments essentiels.</p>
+    <p>Une bonne alimentation n'exige pas d'acheter des produits importes. Les aliments camerounais sont riches en nutriments essentiels.</p>
     <ul>
-      <li><strong>Protéines :</strong> Poisson fumé, haricots, arachides, chenilles, viande de brousse</li>
-      <li><strong>Glucides :</strong> Manioc, igname, plantain, maïs, riz</li>
-      <li><strong>Vitamines :</strong> Légumes feuilles (ndolé, eru, amarante), tomates, carottes, papayes</li>
-      <li><strong>Graisses saines :</strong> Huile de palme rouge (non raffinée), avocat, noix de coco</li>
+      <li><strong>Proteines :</strong> Poisson fume, haricots, arachides, chenilles, viande de brousse</li>
+      <li><strong>Glucides :</strong> Manioc, igname, plantain, mais, riz</li>
+      <li><strong>Vitamines :</strong> Legumes feuilles comme le ndole, eru et amarante, tomates, carottes, papayes</li>
+      <li><strong>Graisses saines :</strong> Huile de palme rouge non raffinee, avocat, noix de coco</li>
     </ul>
   </div>
 
-  <div class="grid-2">
-    <div class="tip-box">
-      <h3>💧 Hydratation</h3>
-      <ul>
-        <li>Boire au moins 2 litres d'eau par jour</li>
-        <li>Toujours faire bouillir l'eau du robinet</li>
-        <li>Les jus de fruits naturels sont bons</li>
-        <li>Éviter les boissons sucrées en excès</li>
-      </ul>
-    </div>
-    <div class="tip-box">
-      <h3>🚫 À éviter</h3>
-      <ul>
-        <li>Excès de sel (hypertension)</li>
-        <li>Huile de palme raffinée en excès</li>
-        <li>Alcool et tabac</li>
-        <li>Aliments ultra-transformés</li>
-      </ul>
-    </div>
+  <div class="conseil">
+    <h3>Hydratation quotidienne</h3>
+    <ul>
+      <li>Boire au moins 2 litres d'eau par jour</li>
+      <li>Toujours faire bouillir l'eau du robinet avant de la boire</li>
+      <li>Les jus de fruits naturels sont recommandes</li>
+      <li>Eviter les boissons sucrees en exces</li>
+    </ul>
   </div>
 
-  <div class="card">
-    <h3>Malnutrition chez l'enfant — signes d'alerte</h3>
+  <div class="bloc">
+    <h3>Aliments et habitudes a eviter</h3>
     <ul>
-      <li>Cheveux roux, cassants et clairsemés</li>
-      <li>Ventre gonflé avec membres maigres (kwashiorkor)</li>
-      <li>Maigreur extrême et peau qui se plisse (marasme)</li>
+      <li>Exces de sel : risque d'hypertension</li>
+      <li>Huile de palme raffinee en grande quantite</li>
+      <li>Alcool et tabac</li>
+      <li>Aliments ultra-transformes vendus en sachet</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <h3>Malnutrition chez l'enfant : signes d'alerte</h3>
+    <ul>
+      <li>Cheveux roux, cassants et clairsemes</li>
+      <li>Ventre gonfle avec membres maigres (kwashiorkor)</li>
+      <li>Maigreur extreme et peau qui se plisse (marasme)</li>
       <li>Enfant apathique, ne pleure plus, ne mange plus</li>
     </ul>
-    <p style="margin-top:8px;"><strong>→ Consulter immédiatement un centre nutritionnel thérapeutique (CNT).</strong></p>
+    <p style="margin-top:8px;"><strong>Consulter immediatement un centre nutritionnel therapeutique (CNT).</strong></p>
   </div>
 
-  <!-- MATERNITE -->
-  <h2 class="section-title" id="maman">🤱 Santé Maternelle</h2>
+  <h2 id="maternite">Sante Maternelle</h2>
 
-  <div class="card">
-    <h3>Suivi de grossesse — ce que vous devez faire</h3>
+  <div class="bloc">
+    <h3>Suivi de grossesse : ce que vous devez faire</h3>
     <ul>
-      <li>Faire au moins <strong>4 consultations prénatales (CPN)</strong> pendant la grossesse</li>
-      <li>Prendre des comprimés de fer et acide folique prescrits</li>
-      <li>Dormir sous moustiquaire (le paludisme est très dangereux en grossesse)</li>
-      <li>Manger équilibré : légumes, protéines, fruits</li>
-      <li>Éviter l'alcool, le tabac, les médicaments sans ordonnance</li>
-      <li>Accoucher dans une formation sanitaire avec personnel qualifié</li>
+      <li>Faire au moins <strong>4 consultations prenatales (CPN)</strong> pendant la grossesse</li>
+      <li>Prendre les comprimes de fer et d'acide folique prescrits</li>
+      <li>Dormir sous moustiquaire car le paludisme est tres dangereux en grossesse</li>
+      <li>Manger equilibre avec des legumes, proteines et fruits</li>
+      <li>Eviter l'alcool, le tabac et les medicaments sans ordonnance</li>
+      <li>Accoucher dans une formation sanitaire avec du personnel qualifie</li>
     </ul>
   </div>
 
-  <div class="urgence">
-    <h3>⛔ Signes de danger pendant la grossesse</h3>
+  <div class="danger">
+    <h3>Signes de danger pendant la grossesse</h3>
     <ul>
-      <li>Saignements vaginaux à tout moment</li>
+      <li>Saignements vaginaux a tout moment</li>
       <li>Douleurs abdominales violentes</li>
-      <li>Maux de tête sévères avec vision floue</li>
+      <li>Maux de tete severes avec vision floue</li>
       <li>Gonflement du visage, des mains et des pieds</li>
-      <li>Absence de mouvements du bébé après 28 semaines</li>
-      <li>Fièvre élevée</li>
+      <li>Absence de mouvements du bebe apres 28 semaines</li>
+      <li>Fievre elevee</li>
     </ul>
   </div>
 
-  <div class="tip-box">
-    <h3>🍼 Allaitement maternel</h3>
+  <div class="conseil">
+    <h3>Allaitement maternel</h3>
     <ul>
-      <li>Allaiter exclusivement jusqu'à 6 mois (sans eau ni autre aliment)</li>
-      <li>Continuer l'allaitement jusqu'à 2 ans avec alimentation complémentaire</li>
-      <li>Le lait maternel protège le bébé des infections</li>
-      <li>Si problème d'allaitement, consulter une sage-femme</li>
+      <li>Allaiter exclusivement jusqu'a 6 mois sans eau ni autre aliment</li>
+      <li>Continuer l'allaitement jusqu'a 2 ans avec alimentation complementaire</li>
+      <li>Le lait maternel protege le bebe des infections</li>
+      <li>En cas de probleme d'allaitement, consulter une sage-femme</li>
     </ul>
   </div>
 
-  <!-- ENFANT -->
-  <h2 class="section-title" id="enfant">👶 Santé de l'Enfant</h2>
+  <h2 id="enfant">Sante de l'Enfant</h2>
 
-  <div class="card">
+  <div class="bloc">
     <h3>Calendrier vaccinal au Cameroun</h3>
-    <table class="symptom-table">
-      <tr><th>Âge</th><th>Vaccins</th></tr>
-      <tr><td>Naissance</td><td>BCG, Polio 0, Hépatite B</td></tr>
+    <table>
+      <tr><th>Age</th><th>Vaccins</th></tr>
+      <tr><td>Naissance</td><td>BCG, Polio 0, Hepatite B</td></tr>
       <tr><td>6 semaines</td><td>Pentavalent 1, Polio 1, Pneumocoque 1, Rotavirus 1</td></tr>
       <tr><td>10 semaines</td><td>Pentavalent 2, Polio 2, Pneumocoque 2, Rotavirus 2</td></tr>
       <tr><td>14 semaines</td><td>Pentavalent 3, Polio 3, Pneumocoque 3</td></tr>
-      <tr><td>9 mois</td><td>RR (Rougeole-Rubéole), Fièvre jaune, Méningite A</td></tr>
-      <tr><td>18 mois</td><td>RR2 (rappel rougeole)</td></tr>
+      <tr><td>9 mois</td><td>Rougeole-Rubeole, Fievre jaune, Meningite A</td></tr>
+      <tr><td>18 mois</td><td>Rappel Rougeole-Rubeole</td></tr>
     </table>
-    <p style="margin-top:8px;font-size:0.85em;">La vaccination est <strong>gratuite</strong> dans les centres de santé publics au Cameroun.</p>
+    <p style="margin-top:8px;font-size:0.85em;">La vaccination est <strong>gratuite</strong> dans les centres de sante publics au Cameroun.</p>
   </div>
 
-  <div class="card">
-    <h3>Diarrhée chez l'enfant — que faire ?</h3>
-    <p>La diarrhée est une des principales causes de mortalité infantile. La déshydratation est le danger principal.</p>
+  <div class="bloc">
+    <h3>Diarrhee chez l'enfant : que faire ?</h3>
+    <p>La diarrhee est une des principales causes de mortalite infantile. La deshydratation est le danger principal.</p>
     <ul>
-      <li>Préparer le <strong>SRO (Solution de Réhydratation Orale)</strong> maison : 1 litre d'eau bouillie + 6 cuillères à café de sucre + 1 cuillère à café de sel</li>
-      <li>Donner à boire souvent, en petites quantités</li>
-      <li>Continuer à allaiter si l'enfant est au sein</li>
-      <li>Consulter si diarrhée dure plus de 2 jours ou si l'enfant est très faible</li>
+      <li>Preparer le <strong>SRO (Solution de Rehydratation Orale)</strong> maison : 1 litre d'eau bouillie, 6 cuilleres a cafe de sucre et 1 cuillere a cafe de sel</li>
+      <li>Donner a boire souvent en petites quantites</li>
+      <li>Continuer a allaiter si l'enfant est au sein</li>
+      <li>Consulter si la diarrhee dure plus de 2 jours ou si l'enfant est tres faible</li>
     </ul>
   </div>
 
-  <!-- PREVENTION -->
-  <h2 class="section-title" id="prevention">🛡️ Prévention des Maladies</h2>
+  <h2 id="prevention">Prevention des Maladies</h2>
 
-  <div class="grid-2">
-    <div class="card">
-      <h3>Hygiène des mains</h3>
-      <p>Se laver les mains avec du savon :</p>
-      <ul>
-        <li>Avant de manger</li>
-        <li>Après les toilettes</li>
-        <li>Après avoir touché un animal</li>
-        <li>Avant de préparer les repas</li>
-        <li>Après avoir changé les couches</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Eau et Assainissement</h3>
-      <ul>
-        <li>Faire bouillir l'eau avant de la boire</li>
-        <li>Couvrir les récipients d'eau</li>
-        <li>Utiliser des latrines ou WC</li>
-        <li>Éloigner les déchets de la maison</li>
-        <li>Laver les fruits et légumes à l'eau propre</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Maladies fréquentes au Cameroun et prévention</h3>
-    <table class="symptom-table">
-      <tr><th>Maladie</th><th>Prévention principale</th></tr>
-      <tr><td>Typhoïde</td><td>Eau bouillie, hygiène alimentaire</td></tr>
-      <tr><td>Choléra</td><td>Eau propre, hygiène des mains, latrines</td></tr>
-      <tr><td>VIH/SIDA</td><td>Préservatif, fidélité, dépistage</td></tr>
-      <tr><td>Tuberculose</td><td>Aération des maisons, vaccin BCG, traitement complet</td></tr>
-      <tr><td>Méningite</td><td>Vaccination, éviter la surpopulation</td></tr>
-      <tr><td>Vers intestinaux</td><td>Hygiène, déparasitage régulier</td></tr>
-    </table>
-  </div>
-
-  <div class="tip-box">
-    <h3>💊 Médicaments — conseils importants</h3>
+  <div class="conseil">
+    <h3>Hygiene des mains</h3>
     <ul>
-      <li>Ne jamais prendre d'antibiotiques sans prescription médicale</li>
-      <li>Toujours terminer un traitement prescrit même si vous vous sentez mieux</li>
-      <li>Éviter les médicaments achetés dans la rue (contrefaçons dangereuses)</li>
-      <li>Acheter uniquement dans les pharmacies agréées</li>
-      <li>Vérifier la date de péremption avant de prendre un médicament</li>
+      <li>Avant de manger</li>
+      <li>Apres les toilettes</li>
+      <li>Apres avoir touche un animal</li>
+      <li>Avant de preparer les repas</li>
+      <li>Apres avoir change les couches d'un bebe</li>
     </ul>
   </div>
 
-  <!-- URGENCES -->
-  <h2 class="section-title" id="urgences">🚨 Urgences et Premiers Secours</h2>
-
-  <div class="card">
-    <h3>En cas de convulsions (crise d'épilepsie ou fièvre)</h3>
+  <div class="conseil">
+    <h3>Eau et assainissement</h3>
     <ul>
-      <li>Allonger la personne sur le côté (position latérale de sécurité)</li>
-      <li>Éloigner les objets dangereux</li>
+      <li>Faire bouillir l'eau avant de la boire</li>
+      <li>Couvrir les recipients d'eau</li>
+      <li>Utiliser des latrines ou WC</li>
+      <li>Eloigner les dechets de la maison</li>
+      <li>Laver les fruits et legumes a l'eau propre</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <h3>Maladies frequentes au Cameroun et leur prevention</h3>
+    <table>
+      <tr><th>Maladie</th><th>Prevention principale</th></tr>
+      <tr><td>Typhoide</td><td>Eau bouillie, hygiene alimentaire</td></tr>
+      <tr><td>Cholera</td><td>Eau propre, hygiene des mains, latrines</td></tr>
+      <tr><td>VIH/SIDA</td><td>Preservatif, fidelite, depistage</td></tr>
+      <tr><td>Tuberculose</td><td>Aeration des maisons, vaccin BCG, traitement complet</td></tr>
+      <tr><td>Meningite</td><td>Vaccination, eviter la surpopulation</td></tr>
+      <tr><td>Vers intestinaux</td><td>Hygiene, deparasitage regulier</td></tr>
+    </table>
+  </div>
+
+  <div class="conseil">
+    <h3>Medicaments : conseils importants</h3>
+    <ul>
+      <li>Ne jamais prendre d'antibiotiques sans ordonnance medicale</li>
+      <li>Toujours terminer un traitement prescrit meme si vous vous sentez mieux</li>
+      <li>Eviter les medicaments achetes dans la rue (risque de contrefacons)</li>
+      <li>Acheter uniquement dans les pharmacies agreees</li>
+      <li>Verifier la date de peremption avant de prendre un medicament</li>
+    </ul>
+  </div>
+
+  <h2 id="urgences">Urgences et Premiers Secours</h2>
+
+  <div class="bloc">
+    <h3>En cas de convulsions</h3>
+    <ul>
+      <li>Allonger la personne sur le cote en position laterale de securite</li>
+      <li>Eloigner les objets dangereux autour d'elle</li>
       <li>Ne rien mettre dans la bouche</li>
       <li>Ne pas retenir la personne de force</li>
-      <li>Chronométrer la durée de la crise</li>
+      <li>Chronometrer la duree de la crise</li>
       <li>Appeler les secours si la crise dure plus de 5 minutes</li>
     </ul>
   </div>
 
-  <div class="card">
-    <h3>En cas de brûlure</h3>
+  <div class="bloc">
+    <h3>En cas de brulure</h3>
     <ul>
-      <li>Refroidir immédiatement sous eau froide (pas glacée) pendant 10-15 min</li>
-      <li>Ne jamais appliquer du beurre, huile ou dentifrice</li>
+      <li>Refroidir immediatement sous eau froide et non glacee pendant 10 a 15 minutes</li>
+      <li>Ne jamais appliquer du beurre, de l'huile ou du dentifrice</li>
       <li>Couvrir avec un tissu propre et humide</li>
-      <li>Aller à l'hôpital pour toute brûlure étendue</li>
+      <li>Aller a l'hopital pour toute brulure etendue</li>
     </ul>
   </div>
 
-  <div class="card">
+  <div class="bloc">
     <h3>En cas de morsure de serpent</h3>
     <ul>
-      <li>Garder la personne au calme, immobiliser le membre mordu</li>
-      <li>Ne pas faire de garrot, ne pas sucer le venin</li>
+      <li>Garder la personne au calme et immobiliser le membre mordu</li>
+      <li>Ne pas faire de garrot et ne pas sucer le venin</li>
       <li>Ne pas faire d'incision sur la plaie</li>
-      <li>Transporter immédiatement à l'hôpital (noter la couleur du serpent si possible)</li>
+      <li>Transporter immediatement a l'hopital</li>
     </ul>
   </div>
 
-  <!-- CONTACTS -->
-  <h2 class="section-title" id="contacts">📞 Numéros Utiles</h2>
+  <h2 id="contacts">Numeros Utiles</h2>
 
-  <div class="urgence">
-    <h3>Numéros d'urgence au Cameroun</h3>
+  <div class="danger">
+    <h3>Numeros d'urgence au Cameroun</h3>
     <p>
-      <span class="numero">119</span> SAMU / Urgences médicales<br>
+      <span class="numero">119</span> SAMU et Urgences medicales<br>
       <span class="numero">117</span> Police<br>
       <span class="numero">118</span> Pompiers<br>
       <span class="numero">1510</span> Croix-Rouge Cameroun
     </p>
   </div>
 
-  <div class="card">
-    <h3>Hôpitaux de référence</h3>
+  <div class="bloc">
+    <h3>Hopitaux de reference</h3>
     <ul>
-      <li><strong>Yaoundé :</strong> Hôpital Central de Yaoundé, CHUY (Gynéco-Obs), Hôpital Général</li>
-      <li><strong>Douala :</strong> Hôpital Laquintinie, Hôpital Général de Douala</li>
-      <li><strong>Bafoussam :</strong> Hôpital Régional de Bafoussam</li>
-      <li><strong>Garoua :</strong> Hôpital Régional de Garoua</li>
-      <li><strong>Bertoua :</strong> Hôpital Régional de Bertoua</li>
+      <li><strong>Yaounde :</strong> Hopital Central, CHUY Gyneco-Obs, Hopital General</li>
+      <li><strong>Douala :</strong> Hopital Laquintinie, Hopital General de Douala</li>
+      <li><strong>Bafoussam :</strong> Hopital Regional de Bafoussam</li>
+      <li><strong>Garoua :</strong> Hopital Regional de Garoua</li>
+      <li><strong>Bertoua :</strong> Hopital Regional de Bertoua</li>
     </ul>
   </div>
 
-  <div class="tip-box">
-    <h3>🏥 Soins gratuits disponibles au Cameroun</h3>
+  <div class="conseil">
+    <h3>Soins gratuits disponibles au Cameroun</h3>
     <ul>
-      <li>Vaccinations pour enfants de 0 à 5 ans</li>
-      <li>Consultations prénatales (CPN)</li>
+      <li>Vaccinations pour enfants de 0 a 5 ans</li>
+      <li>Consultations prenatales (CPN)</li>
       <li>Distribution de moustiquaires MILDA</li>
-      <li>Traitement paludisme enfant moins de 5 ans (dans certains centres)</li>
-      <li>Traitement VIH/SIDA (antirétroviraux)</li>
+      <li>Traitement du paludisme pour enfants de moins de 5 ans dans certains centres</li>
+      <li>Traitement VIH/SIDA avec antiretroviraux</li>
       <li>Planification familiale de base</li>
     </ul>
   </div>
 
   <hr>
 
-  <div class="card">
-    <h3>📱 À propos de ce site</h3>
-    <p>Ce site est une ressource éducative gratuite dédiée à la santé des populations camerounaises. Les informations présentées sont basées sur les recommandations de l'OMS, du Ministère de la Santé Publique du Cameroun et des professionnels de santé locaux.</p>
-    <p style="margin-top:8px;">Ce site ne remplace pas une consultation médicale. Consultez toujours un professionnel de santé pour tout problème médical.</p>
+  <div class="bloc">
+    <h3>A propos de ce site</h3>
+    <p>Ce site est une ressource educative gratuite dediee a la sante des populations camerounaises. Les informations presentees sont basees sur les recommandations de l'OMS et du Ministere de la Sante Publique du Cameroun.</p>
+    <p style="margin-top:8px;">Ce site ne remplace pas une consultation medicale. Consultez toujours un professionnel de sante pour tout probleme medical.</p>
   </div>
 
 </div>
 
 <footer>
-  <p><strong>Santé Cameroun</strong> — Informations médicales gratuites</p>
-  <p>Contenu basé sur les recommandations du Ministère de la Santé Publique du Cameroun et de l'OMS</p>
-  <p style="margin-top:8px; opacity:0.6;">© 2025 — Ce site ne collecte aucune donnée personnelle</p>
+  <p><strong>Sante Cameroun</strong> - Informations medicales gratuites</p>
+  <p>Contenu base sur les recommandations du Ministere de la Sante Publique du Cameroun et de l'OMS</p>
+  <p style="margin-top:8px; opacity:0.6;">2025 PPS_TECH - Ce site ne collecte aucune donnee personnelle</p>
 </footer>
 
 </body>
